@@ -1,0 +1,28 @@
+
+<div class="box">
+  <p-accordion>
+    <p-accordionTab header="Payment" [selected]="true">
+      <h3>Payment</h3>
+      <div class="box-body">
+        <label>Payment Options</label>
+        <div class="radio">
+          <label>
+      <input type="radio" name="paymentType" value="cash" checked [(ngModel)]="paymentType">
+        Cash on Delivery
+      <div *ngIf="paymentType=='cash'">
+      <re-captcha (captchaResponse)="handleCorrectCaptcha($event)" [site_key]="siteKey"></re-captcha>
+      </div>
+  </label>
+        </div>
+        <div class="radio">
+          <label>
+    <input type="radio" name="paymentType" value="bank" [(ngModel)]="paymentType">
+    Bank
+    </label>
+        </div>
+      </div>
+    </p-accordionTab>
+  </p-accordion>
+</div>
+
+<!--<script src='https://www.google.com/recaptcha/api.js?hl=es'></script>-->

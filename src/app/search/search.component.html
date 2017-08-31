@@ -1,0 +1,52 @@
+<layout></layout>
+<div class="banner">
+  <div>
+  <div class="container">
+    <div class="row" style="margin-top:20px">
+      <div class="col-xs-8 col-xs-offset-2">
+        <div class="input-group">
+          <div class="input-group-btn search-panel">
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                    	<span #filter name="search_concept" id="search_concept" ngDefaultControl [(ngModel)]="filterValue">{{filterLabel}}</span><span class="caret"></span>
+                    </button>
+            <ul class="dropdown-menu" role="menu">
+              <li *ngFor="let filter of filterData"><a (click)="SearchFilter($event, filter.filterId)" href="#{{filter.filterId}}">{{filter.filterName}}</a></li>
+            </ul>
+          </div>
+          <ng2-completer [ngModel]="searchItem" (ngModelChange)="SearchOnClick($event)" textNoResults="No Such Medicine Available !!"
+            placeholder="Search Items...." [datasource]="dataService" [minSearchLength]="0"></ng2-completer>
+          <span class="input-group-btn">
+                    <button class="btn btn-default" (click)="Search()" type="button"><span class="glyphicon glyphicon-search"></span></button>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<div class="container" *ngIf="tableActive;else content">
+  <h2>Medicine</h2>
+  <p>Medicine available currently :</p>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Medicine Name</th>
+        <th>Medicine Manufacturer</th>
+        <th>Buy</th>
+      </tr>
+    </thead>
+    <tbody *ngIf="searchTableItems !==null && searchTableItems.length>0">
+      <tr *ngFor="let item of searchTableItems">
+        <td>{{item.medicineName}}</td>
+        <td>{{item.medicineManufacturer}}</td>
+        <td><a [routerLink]="['/order',item.filterId,item.medicineId]">Buy</a></td>
+      </tr>
+    </tbody>
+    <tr *ngIf="searchTableItems.length==0">No Data</tr>
+  </table>
+</div>
+<ng-template #content><h1>Welcome !!</h1></ng-template>
+
+
+
+

@@ -1,0 +1,25 @@
+<layout></layout>
+<div class="container">
+  <div class="alert alert-success" *ngIf="verificationSuccesfull">
+    <strong>Verified Successfully!</strong>
+  </div>
+  <div class="alert alert-danger" *ngIf="verificationFailed && verificationFailedMessage!==''">
+    <strong>{{verificationFailedMessage}}</strong>
+  </div>
+   <div class="alert alert-danger" *ngIf="submissionFailedStatus && submissionFailedMessage!==''">
+    <strong>{{submissionFailedMessage}}</strong>
+  </div>
+  <div class="site-heading">
+    <h1>Product To Buy</h1>
+    <hr class="small">
+    <span class="subheading">Medicine Name :  {{productToBuy.medicineName}}</span>
+    <span class="subheading">Medicine Manufacturer :  {{productToBuy.medicineManufacturer}}</span>
+  </div>
+  <form #form='ngForm' name='form'novalidate>
+    <address (verificationSuccesfull)="SuccessStatus($event)" (verificationFailed)="FailedStatus($event)" (verificationFailedMessage)="FailedMsg($event)"
+      (verified)="Verified($event)"></address>
+    <payment (captchaStatus)="captchStatus($event)"></payment>
+    <button type="submit" (click)="onSubmit(form)" class="btn btn-primary" [disabled]='verified'>Submit</button>
+  </form>
+</div>
+<script src="https://www.paypalobjects.com/api/checkout.js" data-version-4></script>

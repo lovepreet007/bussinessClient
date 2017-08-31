@@ -1,0 +1,45 @@
+<p-growl [(value)]="registrationMessage"></p-growl>
+<div class="col-xs-offset-4 col-xs-4 register-page">
+<form #form='ngForm' name='form' novalidate>
+  <!--<form id="register-form" style="display:none;">-->
+
+    <div id="div-register-msg">
+      <h3>Register an account.</h3>
+    </div>
+    <div class="form-group col-xs-12">
+      <label>UserName</label>
+      <input id="register_username"  #user='ngModel' [(ngModel)]="registration.userName" class="form-control" name="user" type="text" placeholder="Username"
+      required>
+     </div>
+      <div class="form-group col-xs-12">
+      <label>Email</label>
+      <input id="register_email" #emailId='ngModel' name="emailId" [(ngModel)]="registration.email" class="form-control" type="text" placeholder="Email"
+      required>
+     </div>
+      <div class="form-group col-xs-12">
+      <label>Mobile Number</label>
+      <input id="register_mobile"  #mobile='ngModel' name="mobile" [(ngModel)]="registration.mobileNumber" class="form-control" type="text" placeholder="Mobile Number"
+      required>
+     </div>
+       <div class="form-group col-xs-12">
+      <label>New Password</label>
+      <input id="register_newPassword" #pass='ngModel' name="pass" [(ngModel)]="registration.newPassword" class="form-control" type="text" placeholder="New Password"
+      required>
+     </div>
+     <div class="form-group col-xs-12">
+      <label>Gender</label>
+        <label><input type="radio" [(ngModel)]="registration.gender" value="male" #gend='ngModel'  name="gend">Male</label>
+        <label><input type="radio" [(ngModel)]="registration.gender" #gend='ngModel' name="gend" value="female">Female</label>
+
+     </div>
+   <div class="form-group col-xs-12">
+       <button type="submit" class="btn btn-primary form-control btn-block" (click)="Registration()">Register</button>
+   </div>
+ <div class="form-group col-xs-12">
+     <button id="register_login_btn" type="button" (click)="LoginPage()" class="btn btn-link">Log In</button>
+     </div>
+
+
+
+</form>
+</div>

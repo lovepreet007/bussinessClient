@@ -1,0 +1,42 @@
+<div class="col-xs-offset-3 col-xs-4 register-page">
+  <div class="form-group col-xs-12">
+    <div [formGroup]="form">
+      <label [attr.for]="question.key">{{question.label}}</label>
+      <div [ngSwitch]="question.controlType">
+        <span *ngSwitchCase="'images'">
+          <span [ngSwitch]="question.dataType">
+              <img *ngSwitchCase="'image'" height="500" width="1000" [id]="question.key" [src]="question.src">
+          </span>
+        </span>
+
+        <span *ngSwitchCase="'textbox'">
+          <span [ngSwitch]="question.dataType">
+              <input *ngSwitchCase="'string'"  [formControlName]="question.key" [id]="question.key" [type]="question.type" [placeholder]="question.label">
+        </span>
+        </span>
+        <span *ngSwitchCase="'dropdown'">
+           <span [ngSwitch]="question.dataType">
+            <select [id]="question.key" [formControlName]="question.key">
+             <option *ngFor="let opt of question.options" [value]="opt.key">{{opt.value}}</option>
+            </select>
+        </span>
+        </span>
+        <!--<span *ngSwitchCase="'button'">
+        <button type="button" (click)="onButtonClickEvent($event,data,rowIndex,column)" pButton>
+              <span [ngSwitch]="question.dataType">
+                <span *ngSwitchCase="'string'">{{question.value}}</span>
+        </span>
+        </button>
+        </span>-->
+        <span *ngSwitchCase="'hyperlink'">
+        <a href="javascript:void(0)" (click)="onLinkClickEvent(question.value)">
+              <span [ngSwitch]="question.dataType">
+                <span *ngSwitchCase="'string'">{{question.value}}</span>
+                </span>
+                </a>
+        </span>
+      </div>
+      <div class="errorMessage" *ngIf="!isValid">{{question.label}} is required</div>
+    </div>
+  </div>
+</div>

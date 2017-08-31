@@ -1,0 +1,65 @@
+
+<div class="box">
+  <h3>Address</h3>
+  <div class="box-body">
+    <div class="row">
+      <div class="form-group col-xs-6">
+        <label class="control-label" for="nameId">Name :</label>
+        <input #name='ngModel' id="nameId" type="text" class="form-control" placeholder="Name" name="name" [(ngModel)]='addrs.name'
+        />
+      </div>
+      <div class="form-group col-xs-6">
+        <label class="control-label" for="pinCode">Pin Code :</label>
+        <input #pinCode='ngModel' id="pinCode" type="text" class="form-control" placeholder="Pin Code" name="pinCode" [(ngModel)]='addrs.pinCode'
+        />
+      </div>
+    </div>
+    <div class="row">
+      <div class="form-group col-xs-12">
+        <label class="control-label" for="address">Address :</label>
+        <textarea #address='ngModel' id="address" type="text" class="form-control" placeholder="Address" name="address" [(ngModel)]='addrs.street'></textarea>
+      </div>
+    </div>
+    <div class="row">
+      <div class="form-group col-xs-6">
+        <label class="control-label" for="city">City :</label>
+        <input #city='ngModel' id="city" type="text" class="form-control" placeholder="City" name="city" [(ngModel)]='addrs.city'
+        />
+      </div>
+      <div class="form-group col-xs-6">
+        <label class="control-label" for="state">State :</label>
+        <input #state='ngModel' id="state" type="text" class="form-control" placeholder="State" name="state" [(ngModel)]='addrs.state'
+        />
+      </div>
+    </div>
+    <div class="row">
+      <label class="control-label col-xs-12" for="phoneNumber">Mobile Number :</label>
+      <div class="form-group col-xs-9">
+        <span style="color:red;"></span>
+        <input #phoneNumber='ngModel' id="phoneNumber" type="text" class="form-control" placeholder="Phone Number" name="phoneNumber"
+          [(ngModel)]='addrs.phoneNumber' phoneNumberFormatDirective />
+        <div *ngIf='phoneNumber.invalid && phoneNumber.dirty' class="alert alert-danger" role="alert">* Mobile Number is required, must be atleast 10 digit.</div>
+      </div>
+      <div class="form-group col-xs-3">
+        <button type="button" (click)="SendOTP(addrs.phoneNumber)" class="btn btn-primary btn-block">Send OTP</button>
+      </div>
+    </div>
+    <div class="row">
+      <label class="control-label col-xs-12" for="phoneNumber">OTP :</label>
+      <div class="form-group col-xs-9">
+        <span style="color:red;"></span>
+        <input type="text" class="form-control" [(ngModel)]="addrs.verification" name="otp" placeholder="Enter your OTP number" name="verification">
+      </div>
+      <div class="form-group col-xs-3">
+        <button type="button" (click)="VerifyOTP(addrs.verification)" class="btn btn-primary btn-block">Verify</button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="form-group col-xs-12">
+        <label class="control-label" for="landmark">Landmark :</label>
+        <input #landmark='ngModel' id="landmark" type="text" class="form-control" placeholder="Landmark" name="landmark" [(ngModel)]='addrs.landmark'
+        />
+      </div>
+    </div>
+  </div>
+</div>

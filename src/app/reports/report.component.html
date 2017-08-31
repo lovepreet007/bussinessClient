@@ -1,0 +1,58 @@
+<layout></layout>
+<div class="banner">
+  <div class="container">
+  </div>
+</div>
+<div>
+  <span>From :  </span>
+  <p-calendar [showIcon]="true" [(ngModel)]="generateReport.fromDate"></p-calendar><br/>
+</div>
+<div>
+  <span>To   :  </span>
+  <p-calendar [showIcon]="true" [(ngModel)]="generateReport.toDate"></p-calendar><br/>
+</div>
+<div>
+  <p-dropdown [options]="status" [(ngModel)]="selectedStatus"></p-dropdown><br/>
+  <button pButton type="button" label="Generate Report" (click)="GenerateReport()"></button>
+</div>
+
+<div [hidden]="exportedExcel">
+  <div id="exportable">
+    <table width="100%">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>PhoneNumber</th>
+          <th>PinCode</th>
+          <th>Street</th>
+          <th>City</th>
+          <th>State</th>
+          <th>Landmark</th>
+          <th>Medicine Name</th>
+          <th>Medicine Manufacturer</th>
+          <th>Payment Option</th>
+          <th>IsActive</th>
+          <th>Order PlacedOn</th>
+          <th>OrderCompleted</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of report">
+          <td>{{item.name}}</td>
+          <td>{{item.phoneNumber}}</td>
+          <td>{{item?.pinCode}}</td>
+          <td>{{item?.street}}</td>
+          <td>{{item?.city}}</td>
+          <td>{{item.state}}</td>
+          <td>{{item?.landmark}}</td>
+          <td>{{item?.medicineName}}</td>
+          <td>{{item?.medicineManufacturer}}</td>
+          <td>{{item?.paymentOption}}</td>
+          <td>{{item?.isActive}}</td>
+          <td>{{item?.orderPlacedOn | date:'MM/dd/yy'}}</td>
+          <td>{{item?.orderCompleted | date:'MM/dd/yy'}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

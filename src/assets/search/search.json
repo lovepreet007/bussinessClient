@@ -1,0 +1,292 @@
+{
+  "search": [
+    {
+      "medicineId": "1",
+      "medicineName": "Acebutolol",
+      "medicineManufacturer": "SHREEJI PHARMA",
+      "filterId": "1"
+    },
+    {
+      "medicineId": "2",
+      "medicineName": "Atenolol",
+      "medicineManufacturer": "Mutual Pharmaceutical",
+      "filterId": "1"
+    },
+    {
+      "medicineId": "3",
+      "medicineName": "Bisoprolo",
+      "medicineManufacturer": "Mangalam Drugs & Organi",
+      "filterId": "1"
+    },
+    {
+      "medicineId": "4",
+      "medicineName": "Nadolo",
+      "medicineManufacturer": "CORGARD",
+      "filterId": "1"
+    },
+    {
+      "medicineId": "5",
+      "medicineName": "Pradaxa",
+      "medicineManufacturer": "Boehringer Ingelheim",
+      "filterId": "1"
+    },
+    {
+      "medicineId": "1",
+      "medicineName": "Lioresal",
+      "medicineManufacturer": "Novartis Pharmaceuticals U",
+      "filterId": "2"
+    },
+    {
+      "medicineId": "2",
+      "medicineName": "Kemstro",
+      "medicineManufacturer": "Schwarz Pharma",
+      "filterId": "2"
+    },
+    {
+      "medicineId": "3",
+      "medicineName": "Xenazine",
+      "medicineManufacturer": "goodrx",
+      "filterId": "2"
+    },
+    {
+      "medicineId": "4",
+      "medicineName": "Austedo",
+      "medicineManufacturer": "Teva Pharmaceuticals USA",
+      "filterId": "2"
+    },
+    {
+      "medicineId": "5",
+      "medicineName": "deutetrabenazine",
+      "medicineManufacturer": "Teva Pharmaceuticals USA",
+      "filterId": "2"
+    },
+    {
+      "medicineId": "1",
+      "medicineName": "Obenix",
+      "medicineManufacturer": "CIRON Drugs",
+      "filterId": "3"
+    },
+    {
+      "medicineId": "2",
+      "medicineName": "Ocean",
+      "medicineManufacturer": "Ocean Pharma",
+      "filterId": "3"
+    },
+    {
+      "medicineId": "3",
+      "medicineName": "Ocu-Chlor",
+      "medicineManufacturer": "MEDLINE INDIA",
+      "filterId": "3"
+    },
+    {
+      "medicineId": "4",
+      "medicineName": "Ocufen",
+      "medicineManufacturer": "Flurbiprofen",
+      "filterId": "3"
+    },
+    {
+      "medicineId": "1",
+      "medicineName": "Abraxane",
+      "medicineManufacturer": "Paclitaxel",
+      "filterId": "4"
+    },
+    {
+      "medicineId": "2",
+      "medicineName": "CeeNU",
+      "medicineManufacturer": "Lomustine",
+      "filterId": "4"
+    },
+    {
+      "medicineId": "3",
+      "medicineName": "Dacogen",
+      "medicineManufacturer": "Decitabine",
+      "filterId": "4"
+    },
+    {
+      "medicineId": "4",
+      "medicineName": "Femara",
+      "medicineManufacturer": "Letrozole",
+      "filterId": "4"
+    },
+    {
+      "medicineId": "5",
+      "medicineName": "Jakafi",
+      "medicineManufacturer": "Ruxolitinib",
+      "filterId": "4"
+    },
+    {
+      "medicineId": "1",
+      "medicineName": "Xanax",
+      "medicineManufacturer": "Alprazolam",
+      "filterId": "5"
+    },
+    {
+      "medicineId": "2",
+      "medicineName": "Celexa",
+      "medicineManufacturer": "Forest Laboratories",
+      "filterId": "5"
+    },
+    {
+      "medicineId": "3",
+      "medicineName": "Ativan",
+      "medicineManufacturer": "Lorazepam",
+      "filterId": "5"
+    },
+    {
+      "medicineId": "4",
+      "medicineName": "Lexapro",
+      "medicineManufacturer": "Escitalopram",
+      "filterId": "5"
+    },
+    {
+      "medicineId": "1",
+      "medicineName": "Desyrel",
+      "medicineManufacturer": "Trazodone",
+      "filterId": "5"
+    },
+    {
+      "medicineId": "1",
+      "medicineName": "Acebutolol",
+      "medicineManufacturer": "SHREEJI PHARMA",
+      "filterId": "0"
+    },
+    {
+      "medicineId": "2",
+      "medicineName": "Atenolol",
+      "medicineManufacturer": "Mutual Pharmaceutical",
+      "filterId": "0"
+    },
+    {
+      "medicineId": "3",
+      "medicineName": "Bisoprolo",
+      "medicineManufacturer": "Mangalam Drugs & Organi",
+      "filterId": "0"
+    },
+    {
+      "medicineId": "4",
+      "medicineName": "Nadolo",
+      "medicineManufacturer": "CORGARD",
+      "filterId": "0"
+    },
+    {
+      "medicineId": "5",
+      "medicineName": "Pradaxa",
+      "medicineManufacturer": "Boehringer Ingelheim",
+      "filterId": "0"
+    },
+    {
+      "medicineId": "1",
+      "medicineName": "Lioresal",
+      "medicineManufacturer": "Novartis Pharmaceuticals U",
+      "filterId": "0"
+    },
+    {
+      "medicineId": "2",
+      "medicineName": "Kemstro",
+      "medicineManufacturer": "Schwarz Pharma",
+      "filterId": "0"
+    },
+    {
+      "medicineId": "3",
+      "medicineName": "Xenazine",
+      "medicineManufacturer": "goodrx",
+      "filterId": "0"
+    },
+    {
+      "medicineId": "4",
+      "medicineName": "Austedo",
+      "medicineManufacturer": "Teva Pharmaceuticals USA",
+      "filterId": "0"
+    },
+    {
+      "medicineId": "5",
+      "medicineName": "deutetrabenazine",
+      "medicineManufacturer": "Teva Pharmaceuticals USA",
+      "filterId": "0"
+    },
+    {
+      "medicineId": "1",
+      "medicineName": "Obenix",
+      "medicineManufacturer": "CIRON Drugs",
+      "filterId": "0"
+    },
+    {
+      "medicineId": "2",
+      "medicineName": "Ocean",
+      "medicineManufacturer": "Ocean Pharma",
+      "filterId": "0"
+    },
+    {
+      "medicineId": "3",
+      "medicineName": "Ocu-Chlor",
+      "medicineManufacturer": "MEDLINE INDIA",
+      "filterId": "0"
+    },
+    {
+      "medicineId": "4",
+      "medicineName": "Ocufen",
+      "medicineManufacturer": "Flurbiprofen",
+      "filterId": "0"
+    },
+    {
+      "medicineId": "1",
+      "medicineName": "Abraxane",
+      "medicineManufacturer": "Paclitaxel",
+      "filterId": "0"
+    },
+    {
+      "medicineId": "2",
+      "medicineName": "CeeNU",
+      "medicineManufacturer": "Lomustine",
+      "filterId": "0"
+    },
+    {
+      "medicineId": "3",
+      "medicineName": "Dacogen",
+      "medicineManufacturer": "Decitabine",
+      "filterId": "0"
+    },
+    {
+      "medicineId": "4",
+      "medicineName": "Femara",
+      "medicineManufacturer": "Letrozole",
+      "filterId": "0"
+    },
+    {
+      "medicineId": "5",
+      "medicineName": "Jakafi",
+      "medicineManufacturer": "Ruxolitinib",
+      "filterId": "0"
+    },
+    {
+      "medicineId": "1",
+      "medicineName": "Xanax",
+      "medicineManufacturer": "Alprazolam",
+      "filterId": "0"
+    },
+    {
+      "medicineId": "2",
+      "medicineName": "Celexa",
+      "medicineManufacturer": "Forest Laboratories",
+      "filterId": "0"
+    },
+    {
+      "medicineId": "3",
+      "medicineName": "Ativan",
+      "medicineManufacturer": "Lorazepam",
+      "filterId": "0"
+    },
+    {
+      "medicineId": "4",
+      "medicineName": "Lexapro",
+      "medicineManufacturer": "Escitalopram",
+      "filterId": "0"
+    },
+    {
+      "medicineId": "1",
+      "medicineName": "Desyrel",
+      "medicineManufacturer": "Trazodone",
+      "filterId": "0"
+    }
+  ]
+}

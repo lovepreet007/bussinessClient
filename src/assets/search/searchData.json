@@ -1,0 +1,62 @@
+{
+  "0": [
+    "Acebutolol",
+    "Atenolol",
+    "Bisoprolo",
+    "Nadolo",
+    "Pradaxa",
+    "Lioresal",
+    "Kemstro",
+    "Xenazine",
+    "Austedo",
+    "deutetrabenazine",
+    "Obenix",
+    "Ocean",
+    "Ocu-Chlor",
+    "Ocufen",
+    "Abraxane",
+    "CeeNU",
+    "Dacogen",
+    "Femara",
+    "Jakafi",
+    "Xanax",
+    "Celexa",
+    "Ativan",
+    "Lexapro",
+    "Desyrel"
+  ],
+  "1": [
+    "Acebutolol",
+    "Atenolol",
+    "Bisoprolo",
+    "Nadolo",
+    "Pradaxa"
+  ],
+  "2": [
+    "Lioresal",
+    "Kemstro",
+    "Xenazine",
+    "Austedo",
+    "deutetrabenazine"
+  ],
+  "3": [
+    "Obenix",
+    "Ocean",
+    "Ocu-Chlor",
+    "Ocufen"
+  ],
+  "4": [
+    "Abraxane",
+    "CeeNU",
+    "Dacogen",
+    "Femara",
+    "Jakafi"
+  ],
+  "5": [
+    "Xanax", 
+    "Celexa", 
+    "Ativan", 
+    "Lexapro", 
+    "Desyrel" 
+  ]
+}

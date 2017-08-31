@@ -1,0 +1,24 @@
+{
+  "filters": [
+    {
+      "filterId": "1",
+      "filterName": "Cardiology"
+    },
+    {
+      "filterId": "2",
+      "filterName": "Neurology"
+    },
+    {
+      "filterId": "3",
+      "filterName": "Ophthalmology"
+    },
+    {
+      "filterId": "4",
+      "filterName": "Oncology"
+    },
+    {
+      "filterId": "5",
+      "filterName": "Psychiatry"
+    }
+  ]
+}

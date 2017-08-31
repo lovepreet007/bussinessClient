@@ -1,0 +1,31 @@
+<layout></layout>
+<div class="banner">
+  <div class="container">
+  </div>
+</div>
+<h2>{{title}}</h2>
+<p-dataTable [value]="ownerDetails" [lazy]="true" [rows]="3" [paginator]="true" [totalRecords]="totalRecords" (onLazyLoad)="loadCarsLazy($event)">
+  <p-header>List of Orders</p-header>
+  <p-column *ngFor="let col of columnDef" [field]="col.field" [header]="col.header">
+    <template let-column let-data="rowData" let-rowIndex="rowIndex" pTemplate="body">
+      <div [ngSwitch]="col.controlType">
+          <span *ngSwitchCase="'label'">
+          <span [innerHTML]="data[col.field]"></span>
+        </span>
+        <span *ngSwitchCase="'button'">
+            <button type="button" (click)="onButtonClickEvent($event,data,rowIndex,col)" pButton icon="fa-check">
+          </button>
+          </span>
+        <span *ngSwitchCase="'hyperlink'">
+          <a href="javascript:void(0)" (click)="onLinkClickEvent($event,data,rowIndex,column)">
+          </a>
+        </span>
+
+      </div>
+    </template>
+  </p-column>
+
+  <p-footer>Choose from the list.</p-footer>
+</p-dataTable>
+<!--<p-calendar [showIcon]="true" [(ngModel)]="d"></p-calendar>-->
+<!--let-col let-car="rowData"-->
