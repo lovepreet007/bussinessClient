@@ -1,4 +1,26 @@
-<layout></layout>
 <div>
-  <dynamic-form [questions]="questions"></dynamic-form>
+  <layout></layout>
 </div>
+<div style="width: 1200px;margin: 0 auto;">
+  <div>
+
+    <form (ngSubmit)="onSubmit(food)" [formGroup]="food">
+
+      <img type="text" height="300" width="100%" [src]="imageSource" ngDefaultControl formControlName="foodImage">
+
+      <p-tabView scrollable="true">
+        <p-tabPanel header="Overview" [selected]="tabSelected">
+          <overview></overview>
+        </p-tabPanel>
+        <p-tabPanel header="Menu">
+          <menu></menu>
+        </p-tabPanel>
+      </p-tabView>
+
+      <!--<div *ngIf="pageSelected=='overview'">
+
+  </div>
+  <div *ngIf="[pageSelected]==='menu'">
+
+  </div>-->
+    </form>

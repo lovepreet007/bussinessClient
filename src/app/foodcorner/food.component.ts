@@ -1,16 +1,38 @@
 import { Component } from '@angular/core';
-import { QuestionService } from '../dynamic/question.service';
+import { DynamicEmitterService } from '../event/dynamic.emitter.service';
+import { Subscription } from 'rxjs/Subscription';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { ActivatedRoute, Router } from '@angular/router'
+
 @Component({
   selector: 'food',
   templateUrl: './food.component.html',
-  providers: [QuestionService]
+
 })
 export class FoodComponent {
-  questions: any[];
-  constructor(private service: QuestionService) {
-    this.questions = service.getFoodPage();
+  subscription: Subscription;
+
+  food: FormGroup;
+  imageSource: string;
+  tabSelected:boolean;
+  constructor(private sub: DynamicEmitterService, private fb: FormBuilder, private router: Router) {
+
   }
   ngOnInit() {
+
+
+    // this.subscription = this.sub.subscrib
+    //   .subscribe(item => {
+    //     if (!!item) {
+    //       alert(item)
+
+    //     }
+    //   });
+    this.tabSelected =true;
+    this.imageSource = '/assets/images/VegetableBasket.jpg';
+    this.food = this.fb.group({
+      foodImage: new FormControl(''),
+    });
   }
 }
 

@@ -1,6 +1,6 @@
 
 export class OwnerDetails {
-  orderId:string;
+  orderId: string;
   name: string;
   phoneNumber: string;
   pinCode: string;
@@ -17,4 +17,13 @@ export class OwnerDetails {
   isActive: string;
   orderPlacedOn: Date;
   orderCompleted: Date;
+}
+
+export class FoodDetails {
+  foodDetailsId: string;
+  foodId: string;
+  foodName: string;
+  foodItemPrice: string;
+  foodItemName: string;
+  foodDetailsDescription: string;
 }

@@ -7,6 +7,7 @@ export class QuestionBase<T>{
   controlType: string;
   src: string;
   dataType: string;
+  srcs: string[];
 
   constructor(options: {
     value?: T,
@@ -16,7 +17,8 @@ export class QuestionBase<T>{
     order?: number,
     controlType?: string,
     src?: string,
-    dataType?: string
+    dataType?: string,
+    srcs?: string[],
   } = {}) {
     this.value = options.value;
     this.key = options.key || '';
@@ -25,6 +27,7 @@ export class QuestionBase<T>{
     this.order = options.order === undefined ? 1 : options.order;
     this.controlType = options.controlType || '';
     this.src = options.src;
-    this.dataType = options.dataType||'';
+    this.dataType = options.dataType || '';
+    this.srcs = options.srcs || [];
   }
 }

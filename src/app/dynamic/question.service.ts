@@ -59,6 +59,7 @@ export class QuestionService {
 
     return questions.sort((a, b) => a.order - b.order);
   }
+
   getFoodPage() {
 
     let questions: QuestionBase<any>[] = [
@@ -86,6 +87,8 @@ export class QuestionService {
         dataType: 'image'
       }),
 
+
+
       // new TextboxQuestion({
       //   key: 'oldPassword',
       //   label: 'Old Password',
@@ -98,18 +101,18 @@ export class QuestionService {
       new HyperlinkQuestion({
         order: 3,
         dataType: 'string',
-        value:'Menu'
+        value: 'Menu'
       }),
- new HyperlinkQuestion({
+      new HyperlinkQuestion({
         order: 4,
         dataType: 'string',
-        value:'Overview'
+        value: 'Overview'
       }),
 
       new ButtonQuestion({
         order: 4,
         dataType: 'string',
-        value:'Click'
+        value: 'Click'
       }),
     ];
 

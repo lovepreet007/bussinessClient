@@ -1,0 +1,40 @@
+<div [formGroup]="overviewPage">
+  <!--<div formArrayName="overviewInformation">
+    <label  class="checkbox-custom-label">{{overviewPage.get('CONTROL').value}}</label>
+  </div>-->
+
+
+
+  <!-- list of addresses -->
+  <div formArrayName="overviewInformation">
+    <div *ngFor="let address of overviewPage.controls.overviewInformation.controls; let i=index">
+      <!-- address header, show remove button when more than one address available -->
+      <div>
+        <!--{{overviewPage.controls.overviewInformation.controls[i].value.phoneNumber}}-->
+        <span>Address {{i + 1}}</span>
+        <span *ngIf="overviewPage.controls.overviewInformation.controls.length > 1" (click)="removeAddress(i)">ok
+                </span>
+      </div>
+
+      <!-- Angular assigns array index as group name by default 0, 1, 2, ... -->
+      <div [formGroupName]="i">
+
+        <div>
+          <input formControlName="phoneNumber">
+        </div>
+        <div>
+          <input formControlName="openingHours">
+        </div>
+        <div>
+          <input formControlName="highlights">
+        </div>
+        <div>
+          <input formControlName="address">
+        </div>
+        <div>
+          <input formControlName="cost">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

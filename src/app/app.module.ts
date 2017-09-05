@@ -9,7 +9,7 @@ import { OrderService } from './service/order.service'
 import { FormsModule } from '@angular/forms';
 import { SearchFilterOptionsPipe } from './pipes/searchFilterOption.pipe';
 import { Ng2CompleterModule } from "ng2-completer";
-import { AppRouteModule } from './app-routing.module'
+// import { AppRouteModule } from './app-routing.module'
 import { SearchComponent } from './search/search.component';
 import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './contact/about.component';
@@ -27,6 +27,7 @@ import { AuthGuard } from './service/auth.guard';
 import { GrowlModule } from 'primeng/primeng';
 import { ReCaptchaModule } from 'angular2-recaptcha';
 import { AccordionModule } from 'primeng/primeng';
+
 // import { OrderRouteModule } from './order/order-routing.module' ;
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DataTableModule, CalendarModule, SharedModule, PrimeTemplate, DropdownModule, ButtonModule } from 'primeng/primeng';
@@ -38,25 +39,26 @@ import { OrderConfirmComponent } from './order/order.confirm.component'
 import { ForgotPasswordComponent } from './login/forgotPassword.component';
 import { ResetPasswordComponent } from './login/resetPassword.component';
 import { FoodModule } from './foodcorner/food.module'
+import { CommonModule } from './layout/common.module'
 import { ReactiveFormsModule } from '@angular/forms';
 import { DynamicFormQuestionComponent } from './dynamic/dynamic-form-question.component';
 import { DynamicFormComponent } from './dynamic/dynamic-form.component';
 import { DynamicEmitterService } from './event/dynamic.emitter.service';
-import { FoodComponent } from './foodcorner/food.component';
+
 @NgModule({
   declarations: [
     AppComponent, SearchFilterOptionsPipe, SearchComponent, AboutComponent,
     ContactComponent, OwnerComponent, ReportComponent, LoginComponent,
-    LogoutComponent, LayoutComponent, RegistrationComponent,
+    LogoutComponent, RegistrationComponent,
     OrderComponent, AddressComponent, PhoneNumberFormatDirective, PaymentComponent, OrderConfirmComponent, ForgotPasswordComponent,
-    ResetPasswordComponent, DynamicFormQuestionComponent, DynamicFormComponent, FoodComponent
+    ResetPasswordComponent, DynamicFormQuestionComponent, DynamicFormComponent
   ],
   imports: [
-    AppRouteModule, BrowserModule, HttpModule, Ng2CompleterModule, FormsModule, DataTableModule, CalendarModule, SharedModule, DropdownModule, ButtonModule, GrowlModule
-    , ReCaptchaModule, AccordionModule, BrowserAnimationsModule, ReactiveFormsModule, FoodModule
+    BrowserModule, HttpModule, Ng2CompleterModule, FormsModule, DataTableModule, CalendarModule, SharedModule, DropdownModule, ButtonModule, GrowlModule
+    , ReCaptchaModule, AccordionModule, BrowserAnimationsModule, ReactiveFormsModule, FoodModule, CommonModule,
   ],
   providers: [AuthGuard, SearchService, ParamGuardService, OrderService, OwnerService, ReportService, LoginService, RegisterService, DynamicEmitterService],
   bootstrap: [AppComponent],
-
+  exports: []
 })
 export class AppModule { }

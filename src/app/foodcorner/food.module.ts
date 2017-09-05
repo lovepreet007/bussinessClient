@@ -8,14 +8,28 @@ import { ReactiveFormsModule } from '@angular/forms';
 // import { DynamicFormQuestionComponent } from '../dynamic/dynamic-form-question.component';
 // import { DynamicFormComponent } from '../dynamic/dynamic-form.component';
 import { DynamicEmitterService } from '../event/dynamic.emitter.service';
+import { GalleriaModule } from 'primeng/primeng';
+import { MenuComponent } from './menu.component';
+import { OverviewComponent } from './overview.component';
+import { FoodComponent } from './food.component';
+import { LayoutComponent } from '../layout/layout.component';
+import { CommonModule } from '../layout/common.module'
+import { TabViewModule } from 'primeng/primeng';
+import { FoodOrderComponent } from './foodorder.component';
+import { ButtonModule } from 'primeng/primeng';
+import { FoodRouteModule } from './food-routing.module';
+import { FoodLayoutComponent } from './food.layout';
+import { FoodOnlineOrderService } from '../service/foodonlineorder.service';
+
+
 
 @NgModule({
   declarations: [
-
+    FoodComponent, OverviewComponent, MenuComponent, FoodOrderComponent, FoodLayoutComponent
   ],
   imports: [
-    BrowserModule, HttpModule, FormsModule, BrowserAnimationsModule, ReactiveFormsModule,
+    GalleriaModule, FoodRouteModule, BrowserModule, HttpModule, FormsModule, ButtonModule, BrowserAnimationsModule, ReactiveFormsModule, CommonModule, ReactiveFormsModule, TabViewModule
   ],
-  providers: [AuthGuard, DynamicEmitterService],
+  providers: [AuthGuard, DynamicEmitterService,FoodOnlineOrderService],
 })
 export class FoodModule { }
